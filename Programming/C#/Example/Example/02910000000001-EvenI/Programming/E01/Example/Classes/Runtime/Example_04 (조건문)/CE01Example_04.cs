@@ -1,4 +1,4 @@
-//#define P_E01_EXAMPLE_04_01
+#define P_E01_EXAMPLE_04_01
 #define P_E01_EXAMPLE_04_02
 
 using System;
