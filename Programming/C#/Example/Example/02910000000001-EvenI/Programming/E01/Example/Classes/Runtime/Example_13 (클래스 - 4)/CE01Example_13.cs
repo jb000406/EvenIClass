@@ -1,5 +1,5 @@
 //#define P_E01_EXAMPLE_13_01
-//#define P_E01_EXAMPLE_13_02
+#define P_E01_EXAMPLE_13_02
 #define P_E01_EXAMPLE_13_03
 
 using System;
@@ -88,7 +88,7 @@ using System.Threading.Tasks;
  * Ex)
  * class CSomeClass
  * {
- *		public static void operator +(CSomeClass a_oLhs, CSomeClass a_oRhs)
+ *		public static void operator+(CSomeClass a_oLhs, CSomeClass a_oRhs)
  *		{
  *			// Do Something
  *		}
@@ -188,6 +188,10 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			Console.WriteLine("{0} * {1} = {2}", oVecA, 10.0f, oVecA * 10.0f);
 			Console.WriteLine("{0} / {1} = {2}", oVecA, 10.0f, oVecA / 10.0f);
 #endif
+		}
+
+		struct STSomeStruct
+		{
 		}
 
 #if P_E01_EXAMPLE_13_01
