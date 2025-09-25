@@ -1,6 +1,7 @@
 //#define P_E01_EXAMPLE_14_01
 //#define P_E01_EXAMPLE_14_02
-#define P_E01_EXAMPLE_14_03
+//#define P_E01_EXAMPLE_14_03
+#define P_E01_EXAMPLE_14_04
 
 using System;
 using System.Collections.Generic;
@@ -45,7 +46,7 @@ using System.Threading.Tasks;
  * float fValB = 20.0f;
  * 
  * Swap(ref nValA, ref nValB);
- * Swap(ref fValA, ref fValB);
+ * Swap<float>(ref fValA, ref fValB);
  * 
  * 위와 같은 제네릭 메서드를 구현하면 자료형에 종속되지 않는 메서드를 구현하는 것이 가능하다.
  * 
@@ -114,6 +115,13 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				oWriter_File.WriteStr("Hello, World!");
 				oWriter_Console.WriteStr("Hello, World!");
 			}
+#elif P_E01_EXAMPLE_14_04
+			CArray<int> oValues = new CArray<int>();
+
+			for(int i = 0; i < 10; ++i)
+			{
+				oValues.AddVal(i + 1);
+			}
 #endif // #if P_E01_EXAMPLE_14_01
 		}
 
@@ -132,7 +140,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * - where T : struct					<- 값 형식 자료형으로 제한
 		 * - where T : SomeClass				<- 해당 클래스를 상속하는 자료형으로 제한
 		 * - where T : SomeInterface			<- 해당 인터페이스를 따르는 자료형으로 제한
-		 * 
+		 *
 		 * C# 제네릭 메서드 or 제네릭 클래스는 기본적으로 모든 자료형에 동작하도록 정의 될 필요가 
 		 * 있다.
 		 * 
@@ -263,6 +271,22 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			public void WriteStr(string a_oStr)
 			{
 				Console.WriteLine(a_oStr);
+			}
+		}
+#elif P_E01_EXAMPLE_14_04
+		class CArray<T>
+		{
+			private int m_nNumValues = 0;
+			private T[] m_tValues = new T[5];
+
+			public void AddVal(T a_tVal)
+			{
+				if(m_nNumValues >= m_tValues.Length)
+				{
+					Array.Resize(ref m_tValues, m_tValues.Length * 2);
+				}
+
+				m_tValues[m_nNumValues++] = a_tVal;
 			}
 		}
 #endif // #if P_E01_EXAMPLE_14_01
