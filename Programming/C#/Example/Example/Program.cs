@@ -85,7 +85,8 @@ namespace Example
 		/** 메인 메서드 */
 		public static void Main(string[] args)
 		{
-			Program.Main_Programming(args);
+			//Program.Main_Programming(args);
+			Program.Main_Structure(args);
 		}
 
 		/** 프로그래밍 메인 메서드 */
@@ -129,5 +130,25 @@ namespace Example
 
 #endif // #if EXAMPLE
 		}
+
+		/** 자료구조 메인 메서드 */
+		private static void Main_Structure(string[] args)
+		{
+#if EXAMPLE
+			_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_01.CE01Example_01.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_02.CE01Example_02.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
+#elif PRACTICE
+
+#elif SOLUTION
+
+#endif // #if EXAMPLE
+		}
+
 	}
 }
