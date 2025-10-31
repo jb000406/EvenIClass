@@ -210,5 +210,34 @@ namespace Example._02910000000001_EvenI
 				Val = a_tVal
 			};
 		}
+
+		public CNode PoP()
+		{
+			if(this.Node_Head == null)
+				throw new InvalidOperationException("리스트가 비어있습니다.");
+
+			CNode prev = null;
+			var onode = this.Node_Head;
+
+			while(onode.Node_Next != null)
+			{
+				prev = onode;
+				onode = onode.Node_Next;
+			}
+
+			if(prev == null)
+			{
+				this.Node_Tail = null;
+				this.Node_Head = null;
+			}
+			else
+			{
+				this.Node_Tail = prev;
+				prev.Node_Next = null;
+			}
+
+			this.NumValues -= 1;
+			return onode;
+		}
 	}
 }

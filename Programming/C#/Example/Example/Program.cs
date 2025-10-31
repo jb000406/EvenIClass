@@ -38,7 +38,7 @@
  * 종료되어야한다. (+ 즉, 전처리기 조건문에는 { } 기호를 사용하는 것이 불가능하다는 것을
  * 알 수 있다.)
  */
-#define EXAMPLE
+//#define EXAMPLE
 #define PRACTICE
 #define SOLUTION
 
