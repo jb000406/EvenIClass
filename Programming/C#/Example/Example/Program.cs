@@ -39,7 +39,7 @@
  * 알 수 있다.)
  */
 //#define EXAMPLE
-#define PRACTICE
+//#define PRACTICE
 #define SOLUTION
 
 /*
@@ -137,6 +137,12 @@ namespace Example
 		 * 
 		 * 자료구조 과제 2
 		 * - 연결 리스트를 활용해서 스택 구현하기
+		 * 
+		 * 자료구조 과제 3
+		 * - 원형 연결 리스트를 활용해서 큐 구현하기
+		 * 
+		 * 자료구조 과제 4
+		 * - 이진 탐색 트리 레벨 순회 구현하기
 		 */
 
 		/** 자료구조 메인 메서드 */
@@ -157,7 +163,8 @@ namespace Example
 #elif PRACTICE
 			_02910000000001_EvenI.Example.Start(args);
 #elif SOLUTION
-
+			_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
 #endif // #if EXAMPLE
 		}
 
